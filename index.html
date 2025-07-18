@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plataforma de Separación de Residuos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Separación de Residuos</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li><a href="#" onclick="mostrarSeccion('educacion')">Educación Ambiental</a></li>
+        <li><a href="#" onclick="mostrarSeccion('registro')">Registro</a></li>
+        <li><a href="#" onclick="mostrarSeccion('estadisticas')">Estadísticas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="seccion activa">
+      <h2>Bienvenido</h2>
+      <img src="https://cdn.pixabay.com/photo/2021/02/17/13/44/garbage-6024262_1280.png" alt="Ciudad y reciclaje" class="imagen-seccion"/>
+      <p>Esta plataforma busca fomentar la cultura de separación de residuos en Bogotá. Aquí aprenderás cómo separar correctamente y podrás registrar tus prácticas semanales.</p>
+    </section>
+
+    <section id="educacion" class="seccion">
+      <h2>Educación Ambiental</h2>
+      <img src="https://cdn.pixabay.com/photo/2017/03/01/11/06/recycling-2104356_1280.png" alt="Clasificación de residuos" class="imagen-seccion"/>
+      <ul>
+        <li><strong>Orgánico:</strong> Restos de comida, cáscaras, residuos biodegradables.</li>
+        <li><strong>Reciclable:</strong> Papel, cartón, plástico, vidrio limpio, metales.</li>
+        <li><strong>No reciclable:</strong> Papel sucio, pañales, residuos sanitarios.</li>
+      </ul>
+    </section>
+
+    <section id="registro" class="seccion">
+      <h2>Registro Semanal</h2>
+      <img src="https://cdn.pixabay.com/photo/2017/05/10/07/56/recycle-2301615_1280.png" alt="Registro de residuos" class="imagen-seccion"/>
+      <form id="form-registro">
+        <label>¿Separó sus residuos esta semana?</label><br/>
+        <input type="checkbox" name="tipos" value="orgánico"/> Orgánico<br/>
+        <input type="checkbox" name="tipos" value="reciclable"/> Reciclable<br/>
+        <input type="checkbox" name="tipos" value="no reciclable"/> No reciclable<br/><br/>
+
+        <label>¿Cómo los dispuso?</label><br/>
+        <select name="entrega">
+          <option value="camion">Camión</option>
+          <option value="reciclador">Reciclador</option>
+          <option value="punto limpio">Punto limpio</option>
+        </select><br/><br/>
+
+        <button type="submit">Guardar Registro</button>
+      </form>
+    </section>
+
+    <section id="estadisticas" class="seccion">
+      <h2>Estadísticas Locales</h2>
+      <img src="https://cdn.pixabay.com/photo/2017/09/04/18/40/statistics-2714234_1280.jpg" alt="Estadísticas" class="imagen-seccion"/>
+      <div id="stats"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
